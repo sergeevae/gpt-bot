@@ -76,7 +76,8 @@ async def run_python_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
 def main() -> None:
     """Start the bot."""
     # Create the Application and pass it your bot's token.
-    token_str = ""
+    import os
+    token_str = os.environ["gpt_bot_token"]
     application = Application.builder().token(token_str).build()
 
     # on different commands - answer in Telegram
